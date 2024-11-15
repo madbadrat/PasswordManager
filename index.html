@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>Менеджер паролей</title>
+</head>
+
+<body>
+    <div class="user-data">
+        <label>
+            Логин
+            <input type="text" id="login">
+        </label>
+        <label>
+            Пароль
+            <input type="text" id="password">
+        </label>
+        <label>
+            URL
+            <input type="text" id="url">
+        </label>
+
+        <button id="add">Добавить</button>
+    </div>
+
+    <div class="settings">
+        <h1>Генератор паролей</h1>
+        <label>Длина пароля</label>
+        <input type="text" id="length" min="8" max="128" value="8">
+        <br>
+
+        <label>
+            <input type="checkbox" name="symbols" value="numbers">
+            Цифры
+        </label>
+        <label>
+            <input type="checkbox" name="symbols" value="minus">
+            Минус
+        </label>
+        <label>
+            <input type="checkbox" name="symbols" value="underline">
+            Подчеркивание
+        </label>
+        <label>
+            <input type="checkbox" name="symbols" value="brackets">
+            Скобки
+        </label>
+        <label>
+            <input type="checkbox" name="symbols" value="special">
+            Спецсимволы
+        </label>
+
+        <br>
+
+        <button id="generate">Создать</button>
+        <br>
+    </div>
+
+    <div class="list">
+        <h1>Сохраненные пароли</h1>
+        <ul id="passwordList">
+
+        </ul>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
